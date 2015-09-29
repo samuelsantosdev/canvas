@@ -1,0 +1,60 @@
+<html>
+<head>
+	
+</head>
+<body>
+	<canvas width="400" height="400" id="myCanvas" 
+	style="background-color:#000;">
+	</canvas>
+	
+	<script src="js/library/element.js"></script>
+	<script src="js/library/event.js"></script>
+	<script src="js/canvasHandle.js"></script>
+	<script>
+		var canvas = document.body.querySelector("#myCanvas");
+		canvas.canvasHandle();
+		canvas.initialize();
+		var myRect = new Rect();
+		var eventHandle = new EventHandle();
+		
+		myRect.fillStyle = "#fff";
+		myRect.strokeStyle = "yellow";
+		myRect.lineWidth = 5;
+		myRect.x = 10;
+		myRect.y = 20;
+		myRect.width = 100;
+		myRect.height = 50;
+		
+		canvas.renderRect(myRect);
+		eventHandle.addEvent(myRect, canvas, 'mouseover', function(c){
+			console.log(c);
+		});
+		
+	</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
